@@ -1,45 +1,52 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { ChevronRight,ChevronsRight,Play } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Phone, Mail, MapPin, Users, TrendingUp, Award, Star, CheckCircle, Menu } from "lucide-react"
+import { Phone, Mail,X, MapPin, Users, TrendingUp, Award, Star, Heart,CheckCircle,MessageCircle, Menu, Search 
+} from "lucide-react"
+import {useState} from "react"
 
-export default function LeanovaticsWebsite() {
+export default function HomePage() {
+  const [isChatOpen, setIsChatOpen] = useState(false)
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-full"></div>
-              </div>
-              <span className="text-xl font-bold text-gray-900">LEANOVATICS</span>
+            <div className="flex items-center space-x-2 mb-4">
+              <img src="leanovatics.png"></img>               
             </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#" className="text-gray-700 hover:text-blue-600">
+              <nav className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-[#0CBBF2] font-semibold">
                 Home
               </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600">
+              <Link href="/about" className="text-gray-700 hover:text-[#0CBBF2]">
                 About
               </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600">
+              <Link href="/services" className="text-gray-700 hover:text-[#0CBBF2]">
                 Services
               </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600">
+              <Link href="/team" className="text-gray-700 hover:text-[#0CBBF2]">
                 Team
               </Link>
-              <Link href="#" className="text-gray-700 hover:text-blue-600">
+              <Link href="/contact" className="text-gray-700 hover:text-[#0CBBF2]">
                 Contact
               </Link>
-            </nav>
+              </nav>
             <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2 text-sm text-gray-600">
-                <Phone className="w-4 h-4" />
+              <Search className="w-5 h-5 text-gray-600" />
+              <div className="hidden md:flex items-center space-x-2 text-sm text{#000000}">
+                <img src="phonelogo.png"></img>
+                <span>Phone Us</span>  
                 <span>+1 (555) 123-4567</span>
               </div>
               <Button variant="outline" size="sm" className="md:hidden">
@@ -55,27 +62,28 @@ export default function LeanovaticsWebsite() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-5xl font-bold text-[#000000] leading-tight">
                 Welcome to
                 <br />
-                <span className="text-blue-600">Leanovatics</span>
+                <span className="text-[#000000]">Leanovatics</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Leanovatics is a global consulting company focusing on helping businesses optimize their operations and
-                achieve sustainable growth through innovative solutions and strategic planning.
+                Leanovatics is a global consultancy leader, connecting over 6,500 experts to provide innovative, custom solutions for organizations,
+                governments, and institutions worldwide. Our services empower clients to thrive amid complexity by enhancing efficiency, fostering
+                sustainable growth, and building resilience. Let us be your trusted partner in navigating challenges and seizing opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button size="lg" className="bg-[#0CBBF2] hover:bg-[#4548CF]">
                   Get Started Today
                 </Button>
-                <Button variant="outline" size="lg">
+                {/*<Button variant="outline" size="lg">
                   Learn More
-                </Button>
+                </Button>*/}
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="/Img_mask-group.png?height=500&width=400"
                 alt="Professional businesswoman"
                 width={400}
                 height={500}
@@ -92,33 +100,37 @@ export default function LeanovaticsWebsite() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="/Group 6.png?height=400&width=400"
                 alt="Professional businessman"
-                width={400}
+                width={500}
                 height={400}
                 className="rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center">
+              {/*<div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#0CBBF2] rounded-full flex items-center justify-center">
                 <TrendingUp className="w-12 h-12 text-white" />
-              </div>
+              </div>*/}
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900">
+              <h2 className="text-5xl font-bold text-gray-900">
                 Build Your Business
                 <br />
                 With Right Way
               </h2>
+              <p className="text-[#0CBBF2] leading-relaxed">
+                25 Years of experience in consulting service
+              </p>
               <p className="text-gray-600 leading-relaxed">
-                Our comprehensive approach ensures your business grows sustainably while maintaining operational
-                efficiency and market competitiveness.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptem
+                accusantium doloremu laudantium totam rem aperiam eaque
+                upsa quae abillo inventore veritatis architecto
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Image
-                    src="/placeholder.svg?height=50&width=50"
+                    src="/img.png?height=50&width=50"
                     alt="Consultant"
-                    width={50}
-                    height={50}
+                    width={60}
+                    height={60}
                     className="rounded-full"
                   />
                   <div>
@@ -127,7 +139,7 @@ export default function LeanovaticsWebsite() {
                   </div>
                 </div>
               </div>
-              <Button className="bg-blue-600 hover:bg-blue-700">Learn More</Button>
+              <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">Learn More</Button>
             </div>
           </div>
         </div>
@@ -142,9 +154,10 @@ export default function LeanovaticsWebsite() {
               <br />
               Are Full Bright
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our comprehensive services are designed to illuminate every aspect of your business operations and drive
-              sustainable growth.
+            <p className="text-[#000000] max-w-2xl mx-auto">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptem
+              accusantium doloremu laudantium totam rem aperiam eaque
+              upsa quae abillo inventore veritatis architecto
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -152,28 +165,34 @@ export default function LeanovaticsWebsite() {
               {
                 title: "Consulting Services",
                 description: "Strategic business consulting to optimize your operations",
-                icon: Users,
+                image: "/image14.png?height=220&width=320 rounded-left",
               },
               {
                 title: "Technology Services",
                 description: "Modern tech solutions for digital transformation",
-                icon: TrendingUp,
+                image: "/image15.png?height=220&width=320 rounded-left",
               },
               {
                 title: "Technology Services",
                 description: "Advanced analytics and business intelligence",
-                icon: Award,
+                image: "/image16.png?height=220&width=320 rounded-left",
               },
               {
                 title: "Technology Services",
                 description: "Custom software development and integration",
-                icon: CheckCircle,
+                image: "/image17.png?height=220&width=320 rounded-left",
               },
             ].map((service, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600" />
+                  <div className="flex items-center space-x-4">
+                    <Image
+                      src={service.image || "/placeholder.svg"}
+                      alt={service.title}
+                      width={320}
+                      height={220}
+                      className="rounded-left "
+                    />
                   </div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>
                 </CardHeader>
@@ -184,26 +203,37 @@ export default function LeanovaticsWebsite() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button className="bg-blue-600 hover:bg-blue-700">View All Services</Button>
+            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Services</Button>
           </div>
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      {/* Enhanced Statistics Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center text-white">
-            <div>
-              <div className="text-4xl font-bold mb-2">356+</div>
-              <div className="text-blue-100">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">784+</div>
-              <div className="text-blue-100">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">963+</div>
-              <div className="text-blue-100">Expert Consultants</div>
+          <div className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-3 gap-8 items-center text-white">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-4">
+                  <Users className="w-12 h-12 text-white" />
+                </div>
+                <div className="text-4xl font-bold mb-2">356+</div>
+                <div className="text-blue-100">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-4">
+                  <Heart className="w-12 h-12 text-white" />
+                </div>
+                <div className="text-4xl font-bold mb-2">784+</div>
+                <div className="text-blue-100">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-4">
+                  <MessageCircle className="w-12 h-12 text-white" />
+                </div>
+                <div className="text-4xl font-bold mb-2">963+</div>
+                <div className="text-blue-100">Support Team</div>
+              </div>
             </div>
           </div>
         </div>
@@ -221,10 +251,10 @@ export default function LeanovaticsWebsite() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Michael J. Barton", role: "Senior Consultant", image: "/placeholder.svg?height=300&width=250" },
-              { name: "Raymond Galario", role: "Business Analyst", image: "/placeholder.svg?height=300&width=250" },
-              { name: "Samuel Bergson", role: "Strategy Director", image: "/placeholder.svg?height=300&width=250" },
-              { name: "Douglas Robinson", role: "Lead Consultant", image: "/placeholder.svg?height=300&width=250" },
+              { name: "Michael J. Barton", role: "Senior Consultant", image: "/Container (4).png?height=300&width=250" },
+              { name: "Raymond Galario", role: "Business Analyst", image: "/Container (1).png?height=300&width=250" },
+              { name: "Samuel Bergson", role: "Strategy Director", image: "/Container (2).png?height=300&width=250" },
+              { name: "Douglas Robinson", role: "Lead Consultant", image: "/Container (3).png?height=300&width=250" },
             ].map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
@@ -242,39 +272,45 @@ export default function LeanovaticsWebsite() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button className="bg-blue-600 hover:bg-blue-700">View All Team</Button>
+            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Team</Button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 py-20">
+      <section className="relative h-96 bg-gray-900 flex items-center justify-center"> 
+        <Image src="/Group 12.png?height=400&width=1200" alt="Person in warehouse"  
+        fill className="object-cover" />  
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Let's Get To Work Together
-            <br />
-            Ready To Work Us
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Transform your business with our expert consulting services. Let's discuss how we can help you achieve your
-            goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              Get Started
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-gray-900">
-              Contact Us
-            </Button>
+            <div className="relative text-center text-white ">
+             <h2 className="text-4xl font-bold text-white mb-4">
+              Let's Get To Work Together
+               <br />
+              Ready To Work Us
+              </h2>
+              {/*<p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Transform your business with our expert consulting services. Let's discuss how we can help you achieve your
+                goals.
+              </p>*/}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-[#0CBBF2] hover:bg-blue-700">
+                Get Free Quote
+                <ChevronsRight className="w-4 h-4 grid md:grid-cols-1 gap-8" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-[#1A1A1A] border-white hover:bg-[#0CBBF2] hover:text-gray-900">
+                Watch Video
+                <Play className="w-4 h-4" />
+              </Button>
+              </div>
+            </div>
           </div>
-        </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-6xl font-bold text-gray-900 mb-4">
               What Our Client's Say
               <br />
               About Solutions
@@ -285,36 +321,31 @@ export default function LeanovaticsWebsite() {
               {
                 name: "Michelle C. Daniels",
                 role: "CEO, TechCorp",
-                content:
-                  "Leanovatics transformed our business operations completely. Their strategic approach and expertise helped us achieve 40% growth in just 6 months.",
-                image: "/placeholder.svg?height=80&width=80",
+                content:"Leanovatics transformed our business operations completely. Their strategic approach and expertise helped us achieve 40% growth in just 6 months.",
+                image: "/image12.png?height=170&width=284 rounded-left",
               },
               {
                 name: "Anthony R. Castillo",
                 role: "Founder, StartupXYZ",
                 content:
                   "The consulting services provided by Leanovatics were exceptional. They understood our challenges and provided tailored solutions that worked perfectly.",
-                image: "/placeholder.svg?height=80&width=80",
+                image: "/Image13.png?height=170&width=284 rounded-left",
               },
             ].map((testimonial, index) => (
               <Card key={index} className="p-6">
                 <CardContent className="space-y-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 italic">"{testimonial.content}"</p>
+                  
                   <div className="flex items-center space-x-4">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
-                      width={80}
+                      width={170}
                       height={80}
-                      className="rounded-full"
+                      className="rounded-left "
                     />
                     <div>
                       <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                      <p className="text-gray-600 italic">"{testimonial.content}"</p>
                       <p className="text-sm text-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
@@ -332,11 +363,11 @@ export default function LeanovaticsWebsite() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Question</h2>
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/image11.png?height=500&width=630"
                 alt="FAQ illustration"
-                width={400}
-                height={300}
-                className="rounded-lg"
+                width={630}
+                height={315}
+                className="rounded-rg"
               />
             </div>
             <div>
@@ -381,21 +412,21 @@ export default function LeanovaticsWebsite() {
                 help you achieve your goals.
               </p>
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/Group 16.png?height=350&width=795"
                 alt="Contact illustration"
-                width={400}
-                height={300}
+                width={790}
+                height={350}
                 className="rounded-lg"
               />
             </div>
             <div>
-              <Card className="p-6">
+              <Card className="p-6 w-[615px] h-[550px] ">
                 <CardHeader>
                   <CardTitle>Get A Quote Now!</CardTitle>
-                  <CardDescription>We Are Here to Help</CardDescription>
+                  <CardTitle>We Are Here to Help</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <CardContent className="space-y-3">
+                  <div className="grid md:grid-cols-2 gap-10">
                     <Input placeholder="First Name" />
                     <Input placeholder="Last Name" />
                   </div>
@@ -408,7 +439,7 @@ export default function LeanovaticsWebsite() {
                       I agree to the Terms & Conditions
                     </label>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Send Message</Button>
+                  <Button className="w-full bg-[#0CBBF2] hover:bg-blue-700">Send Message</Button>
                 </CardContent>
               </Card>
             </div>
@@ -417,55 +448,48 @@ export default function LeanovaticsWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-[#191A24] text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-full"></div>
-                </div>
-                <span className="text-xl font-bold">LEANOVATICS</span>
+              <div className="flex items-center space-x-2 mb-4">
+                  <img src="leanovatics.png"></img>               
               </div>
               <p className="text-gray-400">
                 Transforming businesses through innovative consulting solutions and strategic planning for sustainable
                 growth.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-xs">f</span>
-                </div>
-                <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center">
-                  <span className="text-xs">t</span>
-                </div>
-                <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center">
-                  <span className="text-xs">in</span>
-                </div>
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-xs">yt</span>
-                </div>
-              </div>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/services" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Our Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/team" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Our Team
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/contact" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Contact Us
                   </Link>
                 </li>
@@ -474,39 +498,55 @@ export default function LeanovaticsWebsite() {
             <div>
               <h3 className="font-semibold mb-4">Consulting Services</h3>
               <ul className="space-y-2 text-gray-400">
+              <li>
+                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
+                    Planning Design
+                    
+                  </Link>
+                </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4" />
                     Business Strategy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
-                    Digital Transformation
+                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
+                    Online Coaching
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
-                    Operations Consulting
+                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
+                    Business Startup
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
-                    Technology Solutions
+                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                    <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
+                    Business Pattern
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Office Address</h3>
+              <h3 className="font-semibold mb-4">Head Office Address</h3>
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-start space-x-2">
-                  <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+                  {/*<MapPin className="w-5 h-5 mt-1 flex-shrink-0" />*/}
                   <span>
-                    123 Business Ave, Suite 100
+                    Lumbung Hidup St 425 East Java
                     <br />
-                    New York, NY 10001
+                    Madiun City Block ABC 123
                   </span>
                 </div>
+                <h3 className="efont-semibold mb-4 text-[#ffffff]">Days Open</h3>
+                  <div className="flex items-start space-x-2">
+                  <span>Monday - Friday 08 AM - 10 PM</span>
+                </div>
+                {/*
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
                   <span>+1 (555) 123-4567</span>
@@ -514,15 +554,83 @@ export default function LeanovaticsWebsite() {
                 <div className="flex items-center space-x-2">
                   <Mail className="w-5 h-5" />
                   <span>info@leanovatics.com</span>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-12 pt-8 text-left text-[#0CBBF2] flex flex-col md:flex-row justify-between items-center">
             <p>&copy; 2024 Leanovatics. All rights reserved.</p>
+          </div>
+          <div className="flex space-x-4 ">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 text-left text-[#0CBBF2]" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-5 h-5  text-right text-[#0CBBF2]" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-5 h-5 r text-right text-[#0CBBF2]" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-5 h-5  text-right text-[#0CBBF2]" />
+            </a>
           </div>
         </div>
       </footer>
+      {/* Live Chat Widget */}
+      {!isChatOpen && (
+        <div className="fixed bottom-6 right-6 z-50">
+          <Button
+            onClick={() => setIsChatOpen(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 shadow-lg animate-pulse"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </Button>
+        </div>
+      )}
+
+      {isChatOpen && (
+        <div className="fixed bottom-6 right-6 z-50 w-80 h-96 bg-white rounded-lg shadow-2xl border">
+          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+            <div>
+              <h3 className="font-semibold">Live Chat</h3>
+              <p className="text-sm text-blue-100">We're here to help!</p>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsChatOpen(false)}
+              className="text-white hover:bg-blue-700"
+            >
+              <X className="w-4 h-4" />
+            </Button>
+          </div>
+          <div className="p-4 h-64 overflow-y-auto">
+            <div className="space-y-3">
+              <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
+                <p className="text-sm">Hello! How can we help you today?</p>
+                <span className="text-xs text-gray-500">Support Team</span>
+              </div>
+              <div className="bg-blue-100 p-3 rounded-lg max-w-xs ml-auto">
+                <p className="text-sm">Hi! I'd like to know more about your consulting services.</p>
+                <span className="text-xs text-gray-500">You</span>
+              </div>
+              <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
+                <p className="text-sm">Great! I'd be happy to help. What specific area are you interested in?</p>
+                <span className="text-xs text-gray-500">Support Team</span>
+              </div>
+            </div>
+          </div>
+          <div className="p-4 border-t">
+            <div className="flex space-x-2">
+              <Input placeholder="Type your message..." className="flex-1" />
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                Send
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
