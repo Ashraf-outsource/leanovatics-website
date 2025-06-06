@@ -193,21 +193,21 @@ export default function TeamPage() {
                 role: "Financial Consultant",
                 specialization: "Financial Planning & Analysis",
                 experience: "16+ years",
-                image: "/team5.jpeg?height=300&width=250",
+                image: "/team10.png?height=300&width=250",
               },
               {
                 name: "Lisa Wang",
                 role: "HR Consultant",
                 specialization: "Organizational Development",
                 experience: "13+ years",
-                image: "/team4.jpeg?height=300&width=250",
+                image: "/team11.png?height=300&width=250",
               },
               {
                 name: "Robert Anderson",
                 role: "Risk Management Consultant",
                 specialization: "Compliance & Risk Assessment",
                 experience: "17+ years",
-                image: "/team5.jpeg?height=300&width=250",
+                image: "/team12 (1).png?height=300&width=250",
               },
             ].map((consultant, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
