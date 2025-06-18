@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight,ChevronsRight,Play } from "lucide-react";
 import { Button } from "@/components/ui/button"
+import QuoteForm from "@/components/QuoteForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
