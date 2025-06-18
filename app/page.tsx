@@ -120,9 +120,11 @@ export default function HomePage() {
                 25 Years of experience in consulting service
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptem
-                accusantium doloremu laudantium totam rem aperiam eaque
-                upsa quae abillo inventore veritatis architecto
+                At Leanovatics, we believe that success isn't just about hard work — 
+                it's about working smart and with purpose. Our mission is to guide you 
+                through the right strategies, tools, and innovations to build a sustainable 
+                and thriving business. Whether you're launching a startup or scaling an existing 
+                venture, we provide expert support in branding, digital presence, automation, and growth planning.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
@@ -155,32 +157,30 @@ export default function HomePage() {
               Are Full Bright
             </h2>
             <p className="text-[#000000] max-w-2xl mx-auto">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptem
-              accusantium doloremu laudantium totam rem aperiam eaque
-              upsa quae abillo inventore veritatis architecto
+              At Leanovatics, we help agencies unlock their full potential with powerful digital solutions. From stunning design to smart automation, we equip you with everything you need to stand out, grow fast, and lead confidently in a competitive market.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "Consulting Services",
-                description: "Strategic business consulting to optimize your operations",
-                image: "/image14.png?height=220&width=320 rounded-left",
+                title: "Governance and Political Consulting",
+                description: "Empower governments, political institutions, and leaders with strategies that foster democratic principles, effective policies, and long-term stability.",
+                image: "/Political1.png?height=220&width=320 rounded-left",
               },
               {
-                title: "Technology Services",
-                description: "Modern tech solutions for digital transformation",
-                image: "/image15.png?height=220&width=320 rounded-left",
+                title: "Management Consulting",
+                description: "Drive operational and strategic optimization to empower your organization and achieve lasting growth.",
+                image: "/Management1.png?height=220&width=320 rounded-left",
               },
               {
-                title: "Technology Services",
-                description: "Advanced analytics and business intelligence",
-                image: "/image16.png?height=220&width=320 rounded-left",
+                title: "Financial Consulting",
+                description: "Attain financial stability and sustainable growth with our data-driven financial strategies.",
+                image: "/Financial1.png?height=220&width=320 rounded-left",
               },
               {
-                title: "Technology Services",
-                description: "Custom software development and integration",
-                image: "/image17.png?height=220&width=320 rounded-left",
+                title: "Human Resources Consulting",
+                description: "Enhance workforce effectiveness, improve talent management, and support employee development.",
+                image: "/Human.png?height=220&width=320 rounded-left",
               },
             ].map((service, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
@@ -203,7 +203,10 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Services</Button>
+            <Link href="/services">
+            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Services
+            </Button>
+            </Link>
           </div>
         </div>
       </section>
