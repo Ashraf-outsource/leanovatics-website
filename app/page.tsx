@@ -24,7 +24,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-2 mb-4">
               <img src="leanovatics.png"></img>               
             </div>
-              <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-[#0CBBF2] font-semibold">
                 Home
               </Link>
@@ -40,7 +40,7 @@ export default function HomePage() {
               <Link href="/contact" className="text-gray-700 hover:text-[#0CBBF2]">
                 Contact
               </Link>
-              </nav>
+            </nav>
             <div className="flex items-center space-x-4">
               {/*<Search className="w-5 h-5 text-gray-600" />*/}
               <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
@@ -339,7 +339,8 @@ export default function HomePage() {
               {
                 name: "Michelle C. Daniels",
                 role: "CEO, TechCorp",
-                content:"Leanovatics transformed our business operations completely. Their strategic approach and expertise helped us achieve 40% growth in just 6 months.",
+                content:
+                  "Leanovatics transformed our business operations completely. Their strategic approach and expertise helped us achieve 40% growth in just 6 months.",
                 image: "/image12.png?height=170&width=284 rounded-left",
               },
               {
@@ -351,19 +352,18 @@ export default function HomePage() {
               },
             ].map((testimonial, index) => (
               <Card key={index} className="p-6">
-                <CardContent className="space-y-4">
-                  
-                  <div className="flex items-center space-x-4">
+                <CardContent>
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
                       width={170}
-                      height={80}
-                      className="rounded-left "
+                      height={170}
+                      className="rounded-lg mb-2 md:mb-0"
                     />
-                    <div>
+                    <div className="text-center md:text-left">
                       <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                      <p className="text-gray-600 italic">"{testimonial.content}"</p>
+                      <p className="text-gray-600 italic mt-2 mb-2">"{testimonial.content}"</p>
                       <p className="text-sm text-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
