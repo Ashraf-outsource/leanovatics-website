@@ -125,20 +125,6 @@ export default function AboutPage() {
                  results-driven solutions. Today, it is recognized as one of the leading consultancies in business, 
                  governance, and development, with a global presence.
               </p>
-              {/* <p className="text-gray-600 leading-relaxed">
-                Since our inception, we have successfully completed over 356 projects, helped 784+ clients achieve their
-                goals, and built a team of 963+ expert consultants who share our passion for excellence and innovation.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-[#0CBBF2]">+</div>
-                  <div className="text-sm text-gray-600">Years of Excellence</div>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-[#0CBBF2]">25+</div>
-                  <div className="text-sm text-gray-600">Countries Served</div>
-                </div>
-              </div>*/}
             </div>
           </div>
         </div>
@@ -187,21 +173,6 @@ export default function AboutPage() {
                 </CardDescription>
               </CardContent>
             </Card>
-
-            {/* <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-[#0CBBF2]" />
-                </div>
-                <CardTitle className="text-xl">Our Values</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Integrity, Excellence, Innovation, and Collaboration form the foundation of our work. We believe in
-                  building lasting partnerships based on trust and mutual success.
-                </CardDescription>
-              </CardContent>
-            </Card>*/}
           </div>
         </div>
       </section>
@@ -278,74 +249,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us */}
-      {/*<section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Leanovatics?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We stand out in the consulting industry through our unique approach and unwavering commitment to client
-              success.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Expert Team",
-                description: "Our consultants are industry veterans with proven track records",
-                icon: Users,
-              },
-              {
-                title: "Proven Results",
-                description: "Over 95% client satisfaction rate with measurable outcomes",
-                icon: TrendingUp,
-              },
-              {
-                title: "Industry Recognition",
-                description: "Award-winning consulting firm recognized globally",
-                icon: Award,
-              },
-              {
-                title: "Tailored Solutions",
-                description: "Customized strategies that fit your unique business needs",
-                icon: CheckCircle,
-              },
-            ].map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-[#0CBBF2]" />
-                  </div>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
-      {/* CTA Section */}
-       {/*<section className="bg-[#0CBBF2] py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of successful companies who have partnered with Leanovatics to achieve their business goals.
-            Let's discuss how we can help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#0CBBF2] hover:bg-gray-100">
-              Get Started Today
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-[#0CBBF2]">
-              Schedule Consultation
-            </Button>
-          </div>
-        </div>
-      </section>*/}
       {/* Services Showcase Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -482,7 +385,6 @@ export default function AboutPage() {
               <h3 className="font-semibold mb-4">Head Office Address</h3>
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-start space-x-2">
-                  {/*<MapPin className="w-5 h-5 mt-1 flex-shrink-0" />*/}
                   <span>
                     Lumbung Hidup St 425 East Java
                     <br />
@@ -493,15 +395,6 @@ export default function AboutPage() {
                   <div className="flex items-start space-x-2">
                   <span>Monday - Friday 08 AM - 10 PM</span>
                 </div>
-                {/*
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5" />
-                  <span>info@leanovatics.com</span>
-                </div>*/}
               </div>
             </div>
           </div>

@@ -47,13 +47,17 @@ export default function HomePage() {
               <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
                 <a
                   href="tel:+15551234567"
-                  className="bg-[#ffffff] text-black px-3 py-1 rounded flex items-center gap-2 hover:bg-blue-700 transition"
+                  className="bg-[#070707] text-white px-3 py-1 rounded flex items-center gap-2 hover:bg-blue-700 transition"
+                  style={{ textDecoration: "none" }}
                 >
                   <img src="phonelogo.png" alt="Phone" className="w-10 h-10" />
                   <span>Phone Us</span>
                   <span>+1 (555) 123-4567</span>
                 </a>
               </div>
+              <Button variant="outline" size="sm" className="md:hidden">
+                <Menu className="w-4 h-4" />
+              </Button>
             </div>
           </div>
         </div>
@@ -518,15 +522,6 @@ export default function HomePage() {
                   <div className="flex items-start space-x-2">
                   <span>Monday - Friday 08 AM - 10 PM</span>
                 </div>
-                {/*
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5" />
-                  <span>info@leanovatics.com</span>
-                </div>*/}
               </div>
             </div>
           </div>
@@ -549,60 +544,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-      {/* Live Chat Widget */}
-      {!isChatOpen && (
-        <div className="fixed bottom-6 right-6 z-50">
-          <Button
-            onClick={() => setIsChatOpen(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 shadow-lg animate-pulse"
-          >
-            <MessageCircle className="w-6 h-6" />
-          </Button>
-        </div>
-      )}
-
-      {isChatOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-80 h-96 bg-white rounded-lg shadow-2xl border">
-          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Live Chat</h3>
-              <p className="text-sm text-blue-100">We're here to help!</p>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsChatOpen(false)}
-              className="text-white hover:bg-blue-700"
-            >
-              <X className="w-4 h-4" />
-            </Button>
-          </div>
-          <div className="p-4 h-64 overflow-y-auto">
-            <div className="space-y-3">
-              <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
-                <p className="text-sm">Hello! How can we help you today?</p>
-                <span className="text-xs text-gray-500">Support Team</span>
-              </div>
-              <div className="bg-blue-100 p-3 rounded-lg max-w-xs ml-auto">
-                <p className="text-sm">Hi! I'd like to know more about your consulting services.</p>
-                <span className="text-xs text-gray-500">You</span>
-              </div>
-              <div className="bg-gray-100 p-3 rounded-lg max-w-xs">
-                <p className="text-sm">Great! I'd be happy to help. What specific area are you interested in?</p>
-                <span className="text-xs text-gray-500">Support Team</span>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 border-t">
-            <div className="flex space-x-2">
-              <Input placeholder="Type your message..." className="flex-1" />
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                Send
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
 }

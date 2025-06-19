@@ -37,7 +37,6 @@ export default function ServicesPage() {
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
-              {/*<Search className="w-5 h-5 text-gray-600" />*/}
               <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
                 <a
                   href="tel:+15551234567"
@@ -294,84 +293,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      
-      {/* Main Services */}
-      {/*<section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Business Strategy Consulting",
-                description:
-                  "Develop comprehensive strategies that align with your business goals and market opportunities.",
-                features: ["Strategic Planning", "Market Analysis", "Competitive Intelligence", "Growth Strategy"],
-                icon: Target,
-                color: "bg-blue-100 text-[#0CBBF2]",
-              },
-              {
-                title: "Digital Transformation",
-                description: "Modernize your operations with cutting-edge technology solutions and digital processes.",
-                features: ["Process Automation", "Cloud Migration", "Digital Workflows", "Technology Integration"],
-                icon: Zap,
-                color: "bg-purple-100 text-purple-600",
-              },
-              {
-                title: "Operations Optimization",
-                description:
-                  "Streamline your operations to improve efficiency, reduce costs, and enhance productivity.",
-                features: ["Process Improvement", "Cost Reduction", "Quality Management", "Supply Chain Optimization"],
-                icon: Settings,
-                color: "bg-green-100 text-green-600",
-              },
-              {
-                title: "Data Analytics & BI",
-                description: "Transform your data into actionable insights for better decision-making and performance.",
-                features: ["Data Analysis", "Business Intelligence", "Reporting Solutions", "Predictive Analytics"],
-                icon: BarChart3,
-                color: "bg-orange-100 text-orange-600",
-              },
-              {
-                title: "Innovation Management",
-                description: "Foster innovation culture and implement creative solutions to drive business growth.",
-                features: ["Innovation Strategy", "Product Development", "R&D Optimization", "Creative Solutions"],
-                icon: Lightbulb,
-                color: "bg-yellow-100 text-yellow-600",
-              },
-              {
-                title: "Risk Management",
-                description: "Identify, assess, and mitigate business risks to protect your organization's future.",
-                features: ["Risk Assessment", "Compliance Management", "Security Consulting", "Crisis Management"],
-                icon: Shield,
-                color: "bg-red-100 text-red-600",
-              },
-            ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div
-                    className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4`}
-                  >
-                    <service.icon className="w-8 h-8" />
-                  </div>
-                  <CardTitle className="text-xl text-center">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-center">{service.description}</CardDescription>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full bg-[#0CBBF2] hover:bg-blue-700">Learn More</Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
       {/* Process Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -411,56 +332,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* Industries Section */}
-      {/*<section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our expertise spans across multiple industries, delivering specialized solutions for diverse business
-              needs.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "Healthcare",
-              "Financial Services",
-              "Manufacturing",
-              "Technology",
-              "Retail & E-commerce",
-              "Education",
-              "Real Estate",
-              "Non-Profit",
-            ].map((industry, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
-              >
-                <h3 className="font-semibold text-gray-900">{industry}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
-      {/* CTA Section */}
-      {/*<section className="bg-[#0CBBF2] py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our consulting services can help transform your business and achieve your goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#0CBBF2] hover:bg-gray-100">
-              Schedule Consultation
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-[#0CBBF2]">
-              Download Brochure
-            </Button>
-          </div>
-        </div>
-      </section>*/}
 
       {/* Expert Guidance Testimonials Section */}
       <section className="py-20">
@@ -578,7 +449,6 @@ export default function ServicesPage() {
               <h3 className="font-semibold mb-4">Head Office Address</h3>
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-start space-x-2">
-                  {/*<MapPin className="w-5 h-5 mt-1 flex-shrink-0" />*/}
                   <span>
                     Lumbung Hidup St 425 East Java
                     <br />
@@ -589,15 +459,6 @@ export default function ServicesPage() {
                   <div className="flex items-start space-x-2">
                   <span>Monday - Friday 08 AM - 10 PM</span>
                 </div>
-                {/*
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5" />
-                  <span>info@leanovatics.com</span>
-                </div>*/}
               </div>
             </div>
           </div>

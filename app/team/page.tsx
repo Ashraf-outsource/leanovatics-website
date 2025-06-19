@@ -34,7 +34,6 @@ export default function TeamPage() {
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
-              {/*<Search className="w-5 h-5 text-gray-600" />*/}
               <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
                 <a
                   href="tel:+15551234567"
@@ -231,26 +230,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
-      {/* Join Our Team */}
-      {/*<section className="bg-[#0CBBF2] py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Join Our Team</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented professionals who share our passion for excellence and innovation. Explore
-            career opportunities with Leanovatics.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#0CBBF2] hover:bg-gray-100">
-              View Open Positions
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-[#0CBBF2]">
-              Submit Resume
-            </Button>
-          </div>
-        </div>
-      </section>*/}
-
       {/* Footer */}
       <footer className="bg-[#191A24] text-white py-16">
         <div className="container mx-auto px-4">
@@ -339,15 +318,6 @@ export default function TeamPage() {
                   <div className="flex items-start space-x-2">
                   <span>Monday - Friday 08 AM - 10 PM</span>
                 </div>
-                {/*
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5" />
-                  <span>info@leanovatics.com</span>
-                </div>*/}
               </div>
             </div>
           </div>

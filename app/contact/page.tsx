@@ -36,7 +36,7 @@ export default function ContactPage() {
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
-              {/*<Search className="w-5 h-5 text-gray-600" />*/}
+
               <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
                 <a
                   href="tel:+15551234567"
@@ -156,26 +156,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      
-      {/* CTA Section */}
-      {/*<section className="bg-[#0CBBF2] py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't wait to transform your business. Contact us today and let's discuss how we can help you achieve your
-            goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[#0CBBF2] hover:bg-gray-100">
-              Schedule Free Consultation
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-[#0CBBF2]">
-              Call Now: +1 (555) 123-4567
-            </Button>
-          </div>
-        </div>
-      </section>*/}
-
       {/* Footer */}
       <footer className="bg-[#191A24] text-white py-16">
         <div className="container mx-auto px-4">
@@ -254,7 +234,6 @@ export default function ContactPage() {
               <h3 className="font-semibold mb-4">Head Office Address</h3>
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-start space-x-2">
-                  {/*<MapPin className="w-5 h-5 mt-1 flex-shrink-0" />*/}
                   <span>
                     Lumbung Hidup St 425 East Java
                     <br />
@@ -265,15 +244,6 @@ export default function ContactPage() {
                   <div className="flex items-start space-x-2">
                   <span>Monday - Friday 08 AM - 10 PM</span>
                 </div>
-                {/*
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5" />
-                  <span>info@leanovatics.com</span>
-                </div>*/}
               </div>
             </div>
           </div>
