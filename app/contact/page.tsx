@@ -256,36 +256,25 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold mb-4">Consulting Services</h3>
               <ul className="space-y-2 text-gray-400">
-              <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+              <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Planning Design
-                    
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4" />
                     Business Strategy
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Online Coaching
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Business Startup
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Business Pattern
-                  </Link>
                 </li>
               </ul>
             </div>
@@ -316,22 +305,23 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-left text-[#0CBBF2]">
-            <p>&copy; 2024 Leanovatics. All rights reserved.</p>
-          </div>
-          <div className="text-left flex gap-4 ">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook className="w-5 h-5 text-left text-[#0CBBF2]" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <Twitter className="w-5 h-5  text-right text-[#0CBBF2]" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <Instagram className="w-5 h-5 r text-right text-[#0CBBF2]" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-5 h-5  text-right text-[#0CBBF2]" />
-            </a>
+
+          <div className="border-t border-gray-800 mt-12 pt-8 flex justify-between items-center">
+            <p className="text-left text-[#0CBBF2]">&copy; 2024 Leanovatics. All rights reserved.</p>
+            <div className="flex gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+            </div>
           </div>
         </div>
       </footer>

@@ -72,14 +72,11 @@ export default function HomePage() {
                 governments, and institutions worldwide. Our services empower clients to thrive amid complexity by enhancing efficiency, fostering
                 sustainable growth, and building resilience. Let us be your trusted partner in navigating challenges and seizing opportunities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#0CBBF2] hover:bg-[#4548CF]">
-                  Get Started Today
-                </Button>
-                {/*<Button variant="outline" size="lg">
-                  Learn More
-                </Button>*/}
-              </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/contact">
+                    <Button size="lg" className="bg-[#0CBBF2] hover:bg-[#4548CF]">Get Started Today</Button>
+                  </Link>
+                </div>
             </div>
             <div className="relative">
               <Image
@@ -141,7 +138,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">Learn More</Button>
+              <div>
+                <Link href="/about">
+                  <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">Learn More</Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -253,7 +254,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Kossivi Nayo", role: "Managing Partner", image: "/team1.jpg?height=300&width=250" },
+              { name: "Samuel D. Akhibi", role: "Managing Partner", image: "/team3.jpg?height=300&width=250" },
               { name: "Imane ATALI", role: "Civil Engineer", image: "/team2.jpg?height=300&width=250" },
               { name: "Eric King", role: " Director", image: "/team6.jpeg?height=300&width=250" },
               { name: "David Thompson", role: "Financial Consultant", image: "/team10.png?height=300&width=250" },
@@ -297,14 +298,12 @@ export default function HomePage() {
                 goals.
               </p>*/}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-[#0CBBF2] hover:bg-blue-700">
-                Get Free Quote
-                <ChevronsRight className="w-4 h-4 grid md:grid-cols-1 gap-8" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-[#1A1A1A] border-white hover:bg-[#0CBBF2] hover:text-gray-900">
-                Watch Video
-                <Play className="w-4 h-4" />
-              </Button>
+              <a href="#contact-form">
+                <Button size="lg" className="bg-[#0CBBF2] hover:bg-blue-700">
+                  Get Free Quote
+                  <ChevronsRight className="w-4 h-4 grid md:grid-cols-1 gap-8" />
+                </Button>
+              </a>
               </div>
             </div>
           </div>
@@ -406,7 +405,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20" id="contact-form">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -477,39 +476,28 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div>
+             <div>
               <h3 className="font-semibold mb-4">Consulting Services</h3>
               <ul className="space-y-2 text-gray-400">
-              <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+              <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Planning Design
-                    
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4" />
                     Business Strategy
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Online Coaching
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Business Startup
-                  </Link>
                 </li>
-                <li>
-                  <Link href="#" className="flex items-center gap-1 hover:text-white">
+                <li className="flex items-center gap-1 hover:text-white">
                     <ChevronRight className="w-4 h-4 hover:text-[#0CBBF2]" />
                     Business Pattern
-                  </Link>
                 </li>
               </ul>
             </div>
@@ -540,22 +528,22 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-left text-[#0CBBF2] flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2024 Leanovatics. All rights reserved.</p>
-          </div>
-          <div className="flex space-x-4 ">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook className="w-5 h-5 text-left text-[#0CBBF2]" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <Twitter className="w-5 h-5  text-right text-[#0CBBF2]" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <Instagram className="w-5 h-5 r text-right text-[#0CBBF2]" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-5 h-5  text-right text-[#0CBBF2]" />
-            </a>
+          <div className="border-t border-gray-800 mt-12 pt-8 flex justify-between items-center">
+            <p className="text-left text-[#0CBBF2]">&copy; 2024 Leanovatics. All rights reserved.</p>
+            <div className="flex gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 text-[#0CBBF2]" />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
