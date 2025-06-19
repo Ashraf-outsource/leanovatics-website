@@ -63,6 +63,16 @@ export default function ContactForm() {
       >
         Send Message
       </button>
+      <div className="text-center mt-4">
+        <a
+          href="mailto:support@leanovatics.com"
+          className="text-[#0CBBF2] hover:underline text-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Already a client? Contact support
+        </a>
+      </div>
     </form>
   );
 }

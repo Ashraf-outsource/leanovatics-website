@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Menu, Search } from "lucide-react"
+import ContactForm from "../components/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -36,10 +37,15 @@ export default function ContactPage() {
             </nav>
             <div className="flex items-center space-x-4">
               {/*<Search className="w-5 h-5 text-gray-600" />*/}
-              <div className="hidden md:flex items-center space-x-2 text-sm text{#000000}">
-                <img src="phonelogo.png"></img>
-                <span>Phone Us</span>  
-                <span>+1 (555) 123-4567</span>
+              <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
+                <a
+                  href="tel:+15551234567"
+                  className="bg-[#ffffff] text-black px-3 py-1 rounded flex items-center gap-2 hover:bg-blue-700 transition"
+                >
+                  <img src="phonelogo.png" alt="Phone" className="w-10 h-10" />
+                  <span>Phone Us</span>
+                  <span>+1 (555) 123-4567</span>
+                </a>
               </div>
               <Button variant="outline" size="sm" className="md:hidden">
                 <Menu className="w-4 h-4" />
@@ -80,42 +86,8 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Get A Quote Now!</h2>
-              <p className="text-gray-600 mb-8">We Are Here to Help</p>
-              <Card className="p-6">
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                      <Input placeholder="Enter your first name" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                      <Input placeholder="Enter your last name" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                    <Input type="email" placeholder="Enter your email address" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <Input type="tel" placeholder="Enter your phone number" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <Textarea placeholder="Your Message" rows={5} />
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" id="terms" className="rounded" />
-                    <label htmlFor="terms" className="text-sm text-gray-600">
-                      I agree to the Terms & Conditions
-                    </label>
-                  </div>
-                  <Button className="w-full bg-[#0CBBF2] hover:bg-blue-700 text-white py-3">Send Message</Button>
-                </CardContent>
-              </Card>
+           <div>
+              <ContactForm />
             </div>
 
             {/* Office Information & Map */}

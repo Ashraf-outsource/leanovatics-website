@@ -35,14 +35,16 @@ export default function TeamPage() {
             </nav>
             <div className="flex items-center space-x-4">
               {/*<Search className="w-5 h-5 text-gray-600" />*/}
-              <div className="hidden md:flex items-center space-x-2 text-sm text{#000000}">
-                <img src="phonelogo.png"></img>
-                <span>Phone Us</span>  
-                <span>+1 (555) 123-4567</span>
+              <div className="hidden md:flex items-center space-x-2 text-sm text-[#000000]">
+                <a
+                  href="tel:+15551234567"
+                  className="bg-[#ffffff] text-black px-3 py-1 rounded flex items-center gap-2 hover:bg-blue-700 transition"
+                >
+                  <img src="phonelogo.png" alt="Phone" className="w-10 h-10" />
+                  <span>Phone Us</span>
+                  <span>+1 (555) 123-4567</span>
+                </a>
               </div>
-              <Button variant="outline" size="sm" className="md:hidden">
-                <Menu className="w-4 h-4" />
-              </Button>
             </div>
           </div>
         </div>
