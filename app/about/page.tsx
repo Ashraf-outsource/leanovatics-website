@@ -82,13 +82,11 @@ export default function AboutPage() {
                 <span className="text-[#0CBBF2]">Leanovatics</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded in 2015, Leanovatics has been at the forefront of business transformation, helping companies
-                across the globe optimize their operations and achieve sustainable growth through innovative consulting
-                solutions and strategic planning.
-              </p>
-              <p className="text-gray-600">
-                Our team of expert consultants brings decades of combined experience in various industries, ensuring
-                that every client receives tailored solutions that drive real results.
+                Leanovatics was founded by a team of visionary professionals – PhD and MBA alumni 
+                from a prestigious institution who aimed to merge academic rigor with practical 
+                problem-solving. Built on principles of collaboration, innovation, and leadership, 
+                Leanovatics has grown from a small group of elite consultants into a trusted global 
+                consultancy, renowned for its excellence and client-focused results.
               </p>
             </div>
             <div className="relative">
