@@ -53,6 +53,9 @@ export default function AboutPage() {
                   <span>+1 (555) 123-4567</span>
                 </a>
               </div>
+              <Button variant="outline" size="sm" className="md:hidden">
+                <Menu className="w-4 h-4" />
+              </Button>
             </div>
           </div>
         </div>
