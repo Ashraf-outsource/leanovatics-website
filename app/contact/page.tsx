@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Menu, Search } from "lucide-react"
 import ContactForm from "../components/ContactForm";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -47,13 +49,23 @@ export default function ContactPage() {
                   <span>+1 (555) 123-4567</span>
                 </a>
               </div>
-              <Button variant="outline" size="sm" className="md:hidden">
+              <Button  variant="outline"  size="sm"  className="md:hidden"  onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <Menu className="w-4 h-4" />
-              </Button>
+                </Button>
             </div>
           </div>
         </div>
       </header>
+      
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md z-50 flex flex-col">
+          <a href="/" className="p-4 border-b">Home</a>
+          <a href="/about" className="p-4 border-b">About</a>
+          <a href="/services" className="p-4 border-b">Services</a>
+          <a href="/contact" className="p-4">Contact</a>
+        </div>
+      )}      
 
       {/* Breadcrumb */}
       <section className="bg-gray-50 py-8">
