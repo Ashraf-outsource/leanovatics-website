@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight,ChevronsRight,Play } from "lucide-react";
 import { Button } from "@/components/ui/button"
-import QuoteForm from "@/components/QuoteForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -205,8 +204,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link href="/services">
-            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Services
-            </Button>
+            <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Services</Button>
             </Link>
           </div>
         </div>
@@ -255,7 +253,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Michael J. Barton", role: "Senior Consultant", image: "/Container (4).png?height=300&width=250" },
+              { name: "Kossivi Nayo", role: "Leadership Team", image: "/team1.jpg?height=400&width=300" },
               { name: "Raymond Galario", role: "Business Analyst", image: "/Container (1).png?height=300&width=250" },
               { name: "Samuel Bergson", role: "Strategy Director", image: "/Container (2).png?height=300&width=250" },
               { name: "Douglas Robinson", role: "Lead Consultant", image: "/Container (3).png?height=300&width=250" },
