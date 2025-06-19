@@ -1,3 +1,6 @@
+"use client"
+
+
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight,ChevronsRight,Play } from "lucide-react";
@@ -8,7 +11,6 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { MessageCircle, X } from "lucide-react"
 import { Input } from "@/components/ui/input"
-
 export default function ServicesPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (

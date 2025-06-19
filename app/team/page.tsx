@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import Image from "next/image"
 import Link from "next/link"
@@ -47,7 +49,7 @@ export default function TeamPage() {
                 </a>
               </div>
               <Button
-                 variant="outline"
+                variant="outline"
                 size="sm"
                 className="md:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}>

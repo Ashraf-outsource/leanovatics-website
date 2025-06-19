@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ChevronRight,ChevronsRight,Play } from "lucide-react";
@@ -8,7 +10,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Menu, Search } from "lucide-react"
 import ContactForm from "../components/ContactForm";
 import { useState } from "react";
-
 export default function ContactPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -56,7 +57,7 @@ export default function ContactPage() {
           </div>
         </div>
       </header>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md z-50 flex flex-col">

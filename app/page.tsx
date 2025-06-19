@@ -9,8 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Phone, Mail,X, MapPin, Users, TrendingUp, Award, Star, Heart,CheckCircle,MessageCircle, Menu, Search 
-} from "lucide-react"
+import { Phone, Mail,X, MapPin, Users, TrendingUp, Award, Star, Heart,CheckCircle,MessageCircle, Menu, Search } from "lucide-react"
 import {useState} from "react"
 import ContactForm from "./components/ContactForm";
 
@@ -55,14 +54,9 @@ export default function HomePage() {
                   <span>+1 (555) 123-4567</span>
                 </a>
               </div>
-              <Button
-              variant="outline"
-              size="sm"
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
+              <Button variant="outline" size="sm" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <Menu className="w-4 h-4" />
-                </Button>
+              </Button>
             </div>
           </div>
         </div>
