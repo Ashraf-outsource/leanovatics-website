@@ -12,10 +12,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Phone, Mail,X, MapPin, Users, TrendingUp, Award, Star, Heart,CheckCircle,MessageCircle, Menu, Search 
 } from "lucide-react"
 import {useState} from "react"
+import ContactForm from "./components/ContactForm";
 
 export default function HomePage() {
   const [isChatOpen, setIsChatOpen] = useState(false)
-  
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -43,7 +43,7 @@ export default function HomePage() {
               </Link>
               </nav>
             <div className="flex items-center space-x-4">
-              <Search className="w-5 h-5 text-gray-600" />
+              {/*<Search className="w-5 h-5 text-gray-600" />*/}
               <div className="hidden md:flex items-center space-x-2 text-sm text{#000000}">
                 <img src="phonelogo.png"></img>
                 <span>Phone Us</span>  
@@ -253,10 +253,10 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Kossivi Nayo", role: "Leadership Team", image: "/team1.jpg?height=400&width=300" },
-              { name: "Raymond Galario", role: "Business Analyst", image: "/Container (1).png?height=300&width=250" },
-              { name: "Samuel Bergson", role: "Strategy Director", image: "/Container (2).png?height=300&width=250" },
-              { name: "Douglas Robinson", role: "Lead Consultant", image: "/Container (3).png?height=300&width=250" },
+              { name: "Kossivi Nayo", role: "Managing Partner", image: "/team1.jpg?height=300&width=250" },
+              { name: "Imane ATALI", role: "Civil Engineer", image: "/team2.jpg?height=300&width=250" },
+              { name: "Eric King", role: " Director", image: "/team6.jpeg?height=300&width=250" },
+              { name: "David Thompson", role: "Financial Consultant", image: "/team10.png?height=300&width=250" },
             ].map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
@@ -274,7 +274,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-12">
+            <Link href="/team">
             <Button className="bg-[#0CBBF2] hover:bg-[#4548CF]">View All Team</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -410,8 +412,7 @@ export default function HomePage() {
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">Let's Get in Touch</h2>
               <p className="text-gray-600">
-                Ready to transform your business? Get in touch with our expert consultants today and discover how we can
-                help you achieve your goals.
+                Ready to transform your business? Get in touch with our expert consultants today and discover how we can help you achieve your goals.
               </p>
               <Image
                 src="/Group 16.png?height=350&width=795"
@@ -422,28 +423,7 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <Card className="p-6 w-[615px] h-[550px] ">
-                <CardHeader>
-                  <CardTitle>Get A Quote Now!</CardTitle>
-                  <CardTitle>We Are Here to Help</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <Input placeholder="First Name" />
-                    <Input placeholder="Last Name" />
-                  </div>
-                  <Input placeholder="Email Address" type="email" />
-                  <Input placeholder="Phone Number" type="tel" />
-                  <Textarea placeholder="Your Message" rows={4} />
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" id="terms" className="rounded" />
-                    <label htmlFor="terms" className="text-sm text-gray-600">
-                      I agree to the Terms & Conditions
-                    </label>
-                  </div>
-                  <Button className="w-full bg-[#0CBBF2] hover:bg-blue-700">Send Message</Button>
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
           </div>
         </div>
